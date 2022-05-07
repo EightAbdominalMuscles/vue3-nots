@@ -1,22 +1,26 @@
 <script setup>
+import { useAppStore } from '@/store';
 import { ref } from 'vue'
+const appStore = useAppStore();
 
+const count = ref(1)
+// console.log(store)
 defineProps({
   msg: String
 })
-
-const count = ref(0)
+// 请求mock api 测试
+fetch('/api/getUsers')
+.then(res => res.json())
+.then(data=> {
+  console.log(data)
+})
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
 
-  <p>
-    Recommended IDE setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>
-    +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-  </p>
+  <p>从pinia中拿到的数据 {{appStore.theme}}</p>
+  <p>element-plus自动引入 <el-button>Default</el-button></p>
 
   <p>
     <a href="https://vitejs.dev/guide/features.html" target="_blank">
@@ -34,7 +38,5 @@ const count = ref(0)
 </template>
 
 <style scoped>
-a {
-  color: #42b983;
-}
+
 </style>
