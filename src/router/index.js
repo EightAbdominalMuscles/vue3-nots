@@ -29,6 +29,6 @@ const router = createRouter({
   scrollBehavior() {
     return { top: 0 };
   },
-})
+});
 createRouteGuard(router);
-export default router
+export default router;

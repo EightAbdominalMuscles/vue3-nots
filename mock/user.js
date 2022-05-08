@@ -7,7 +7,7 @@ export default [
         code: 0,
         message: 'ok',
         data: ['admin', 'zhangyu'],
-      }
+      };
     },
   },
-]
+];

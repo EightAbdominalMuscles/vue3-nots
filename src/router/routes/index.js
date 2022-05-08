@@ -1,4 +1,3 @@
-
 const modules = import.meta.globEager('./modules/*.js');
 const appRoutes = [];
 

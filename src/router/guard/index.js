@@ -1,4 +1,5 @@
 import { setRouteEmitter } from '@/utils/route-listener';
+
 function setupPageGuard(router) {
   router.beforeEach(async (to) => {
     // 发布 路由

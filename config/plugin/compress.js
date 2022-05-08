@@ -1,12 +1,12 @@
 /**
  * gzip压缩
  */
- import compressPlugin from 'vite-plugin-compression';
+import compressPlugin from 'vite-plugin-compression';
 
- export default function configCompressPlugin(
-  compress= 'gzip', // gzip | 'brotli'
+export default function configCompressPlugin(
+  compress = 'gzip', // gzip | 'brotli'
   deleteOriginFile = false
- ) {
+) {
   const plugins = [];
   if (compress === 'gzip') {
     plugins.push(
@@ -25,5 +25,5 @@
       })
     );
   }
-  return plugins
- }
+  return plugins;
+}

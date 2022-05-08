@@ -23,6 +23,6 @@ export default {
       meta: {
         title: '404',
       },
-    }
-  ]
-}
+    },
+  ],
+};
