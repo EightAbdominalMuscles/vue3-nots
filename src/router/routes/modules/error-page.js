@@ -4,7 +4,7 @@ export default {
   component: () => import('@/views/error-page/401.vue'),
   meta: {
     // 生成菜单
-    title: '错误页',
+    title: '错误 页',
     breadcrumb: false,
     order: 2,
   },
