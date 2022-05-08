@@ -21,14 +21,23 @@ import.meta.globEager vite新增 https://cn.vitejs.dev/guide/features.html#glob-
 + dayjs 是一个轻量的处理时间和日期的 JavaScript 库，和 Moment.js 的 API 设计保持完全一样. 如果您曾经用过 Moment.js, 那么您已经知道如何使用 Day.js
 + normalize.css 初始化样式
 + mitt 单独订阅发布模式 （用于监听路由从而改变菜单选中）
+
+#### 代码规范
++ eslint 检查代码质量与风格的工具
++ stylelint 自动书写css顺序（目的：减少浏览器的回流。提升浏览器渲染性能）
+  + stylelint-config-rational-order
+  + stylelint-config-standard
+  + stylelint-order
+  + stylelint-scss
+  + stylelint-config-prettier
 #### 打包后的处理
 + vite-plugin-compression 支持gzip压缩
 + rollup-plugin-visualizer 生成打包分析
 + vite-plugin-imagemin 图片压缩
 ### 功能处理
-+ 基本布局
-+ 动态导航侧边栏
-+ 动态导航面包屑
++ 基本布局✅
++ 动态导航侧边栏✅
++ 动态导航面包屑✅
 + 路由和菜单
 + 权限管理
 + 打包构建

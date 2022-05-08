@@ -11,7 +11,7 @@ export default {
   children: [
     {
       path: '401',
-      name: '401',
+      name: '401g',
       component: () => import('@/views/error-page/401.vue'),
       meta: {
         title: '401',
@@ -19,7 +19,7 @@ export default {
     },
     {
       path: '404',
-      name: '404',
+      name: '404g',
       component: () => import('@/views/error-page/404.vue'),
       meta: {
         title: '404',

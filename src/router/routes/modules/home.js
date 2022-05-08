@@ -5,7 +5,7 @@ export default {
   meta: {
     // 生成菜单
     title: '首页',
-    order:4,
+    order:1,
     requiresAuth: true,
   }
 }
