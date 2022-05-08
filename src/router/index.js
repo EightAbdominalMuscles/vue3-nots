@@ -1,13 +1,14 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import NProgress from 'nprogress'; // progress bar
 import 'nprogress/nprogress.css';
 
 import DefaultLayout from '@/layout/default-layout.vue';
-import appRoutes from './routes/index.js';
+import appRoutes from './routes';
+import createRouteGuard from './guard';
 
 NProgress.configure({ showSpinner: false });
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: [
     {
       path: '/',
@@ -24,6 +25,10 @@ const router = createRouter({
       component: DefaultLayout,
       children: appRoutes,
     },
-  ]
+  ],
+  scrollBehavior() {
+    return { top: 0 };
+  },
 })
+createRouteGuard(router);
 export default router
