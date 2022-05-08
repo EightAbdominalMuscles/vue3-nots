@@ -5,5 +5,7 @@
       "comps/*": ["./src/components/*"],
       "assets/*": ["./src/assets/*"]
     }
-  }
+  },
+  "include": ["src/**/*", "src/**/*.vue"],
+  "exclude": ["node_modules"]
 }

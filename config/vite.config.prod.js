@@ -1,21 +1,17 @@
-import { mergeConfig } from 'vite';
+import { mergeConfig } from 'vite'
 
-import baseConig from './vite.config.base';
+import baseConig from './vite.config.base'
 // gzip压缩
-import configCompressPlugin from './plugin/compress';
+import configCompressPlugin from './plugin/compress'
 // 生成打包报告
-import configVisualizerPlugin from './plugin/visualizer';
+import configVisualizerPlugin from './plugin/visualizer'
 // 图片压缩
-import configImageminPlugin from './plugin/imagemin';
+import configImageminPlugin from './plugin/imagemin'
 
 export default mergeConfig(
   {
     mode: 'production',
-    plugins: [
-      configCompressPlugin('gzip'),
-      configVisualizerPlugin(),
-      configImageminPlugin(),
-    ],
+    plugins: [configCompressPlugin('gzip'), configVisualizerPlugin(), configImageminPlugin()],
     build: {
       rollupOptions: {
         output: {
@@ -30,4 +26,4 @@ export default mergeConfig(
     },
   },
   baseConig
-);
+)

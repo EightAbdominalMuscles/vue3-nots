@@ -1,6 +1,6 @@
-import { mergeConfig } from 'vite';
+import { mergeConfig } from 'vite'
 
-import baseConig from './vite.config.base';
+import baseConig from './vite.config.base'
 
 export default mergeConfig(
   {
@@ -13,4 +13,4 @@ export default mergeConfig(
     },
   },
   baseConig
-);
+)
