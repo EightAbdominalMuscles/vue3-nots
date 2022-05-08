@@ -25,6 +25,7 @@ module.exports = {
         ],
         'extensions': ['.js', '.jsx', '.json']
       }
+    }
   },
   extends: [
     // Airbnb JavaScript Style Guide https://github.com/airbnb/javascript
