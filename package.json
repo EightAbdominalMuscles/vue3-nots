@@ -18,10 +18,6 @@
       "prettier --write",
       "eslint --fix"
     ],
-    "*.{css}": [
-      "stylelint --fix",
-      "prettier --write"
-    ],
     "*.{js,css,vue,md,js,jsx}": [
       "prettier --write",
       "git add"
