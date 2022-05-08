@@ -7,6 +7,7 @@ import.meta.globEager vite新增 https://cn.vitejs.dev/guide/features.html#glob-
 ### 插件
 
 + @vitejs/plugin-vue-jsx  解析jsx(只适用于单文件中使用jsx)
++ "@vue/babel-plugin-jsx": "^1.1.1",
 + mock数据
   + vite-plugin-mock 和 mockjs 
 + cross-env 设置环境变量
@@ -24,12 +25,24 @@ import.meta.globEager vite新增 https://cn.vitejs.dev/guide/features.html#glob-
 
 #### 代码规范
 + eslint 检查代码质量与风格的工具
+  + eslint-config-airbnb-base
+  + eslint-config-prettier
+  + eslint-plugin-import
+  
+  + eslint-plugin-vue
+
 + stylelint 自动书写css顺序（目的：减少浏览器的回流。提升浏览器渲染性能）
   + stylelint-config-rational-order
   + stylelint-config-standard
   + stylelint-order
   + stylelint-scss
+  
++ prettier
   + stylelint-config-prettier
+  + eslint-plugin-prettier
+
++ lint-staged 在我们提交代码时，只会对修改的文件进行检查、修复处理，以保证提交的代码没有语法错误，不会影响其他人在更新代码无法运行的问题。
++ 
 #### 打包后的处理
 + vite-plugin-compression 支持gzip压缩
 + rollup-plugin-visualizer 生成打包分析
