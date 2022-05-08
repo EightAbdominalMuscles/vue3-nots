@@ -22,7 +22,8 @@
     "*.{scss,css}": [
       "stylelint --fix",
       "prettier --write"
-    ]
+    ],
+    "*.{js,css,md,js,jsx}": ["prettier --write", "git add"]
   },
   "dependencies": {
     "@element-plus/icons-vue": "^1.1.4",
