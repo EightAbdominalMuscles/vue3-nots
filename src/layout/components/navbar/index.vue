@@ -3,7 +3,7 @@
     <div class="left_side">
       <el-space>
         <img src="./logo.png" alt="logo" />
-        <span class="typography-title">MyNewstore</span>
+        <span class="typography-title">MyNewstor e</span>
       </el-space>
     </div>
     <ul class="right_side">
