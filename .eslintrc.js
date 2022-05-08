@@ -1,4 +1,5 @@
 // eslint-disable-next-line
+const path = require('path');
 
 module.exports = {
   root: true,
@@ -16,7 +17,15 @@ module.exports = {
     'node': true,
     'vue/setup-compiler-macros': true,
   },
-
+  settings: {
+    'import/resolver': {
+      'alias': {
+        'map': [
+          ['@', './src']
+        ],
+        'extensions': ['.js', '.jsx', '.json']
+      }
+  },
   extends: [
     // Airbnb JavaScript Style Guide https://github.com/airbnb/javascript
     'airbnb-base',
