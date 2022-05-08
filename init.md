@@ -28,7 +28,7 @@ import.meta.globEager vite新增 https://cn.vitejs.dev/guide/features.html#glob-
   + eslint-config-airbnb-base
   + eslint-config-prettier
   + eslint-plugin-import
-  
+  + eslint-import-resolver-alias  vite别名eslint不认识 https://juejin.cn/post/7021084391065518087
   + eslint-plugin-vue
 
 + stylelint 自动书写css顺序（目的：减少浏览器的回流。提升浏览器渲染性能）
