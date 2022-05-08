@@ -19,11 +19,11 @@
       "prettier --write",
       "eslint --fix"
     ],
-    "*.{scss,css}": [
+    "*.{css}": [
       "stylelint --fix",
       "prettier --write"
     ],
-    "*.{js,css,scss,vue,md,js,jsx}": [
+    "*.{js,css,vue,md,js,jsx}": [
       "prettier --write",
       "git add"
     ]

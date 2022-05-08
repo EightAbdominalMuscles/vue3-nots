@@ -16,7 +16,7 @@
           </span>
           <template #dropdown>
             <el-dropdown-menu>
-              <el-dropdown-item command="editPassword">修改密码 </el-dropdown-item>
+              <el-dropdown-item command="editPassword">修改 密码 </el-dropdown-item>
               <el-dropdown-item command="logout">登 出</el-dropdown-item>
             </el-dropdown-menu>
           </template>
