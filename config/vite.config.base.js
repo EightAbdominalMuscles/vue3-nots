@@ -17,7 +17,7 @@ export default defineConfig({
         replacement: resolve(__dirname, '../src'),
       },
       {
-        find: 'comps',
+        find: 'components',
         replacement: resolve(__dirname, '../src/components'),
       },
       {

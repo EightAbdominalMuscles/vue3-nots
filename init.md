@@ -39,7 +39,6 @@ import.meta.globEager vite 新增 https://cn.vitejs.dev/guide/features.html#glob
   - stylelint-config-rational-order
   - stylelint-config-standard
   - stylelint-order
-  - stylelint-scss
 - prettier
 
   - stylelint-config-prettier

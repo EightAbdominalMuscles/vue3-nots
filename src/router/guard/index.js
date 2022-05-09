@@ -1,12 +1,12 @@
-import { setRouteEmitter } from '@/utils/route-listener';
+import { setRouteEmitter } from '@/utils/route-listener'
 
 function setupPageGuard(router) {
   router.beforeEach(async (to) => {
     // 发布 路由
-    setRouteEmitter(to);
-  });
+    setRouteEmitter(to)
+  })
 }
 export default function createRouteGuard(router) {
-  setupPageGuard(router);
+  setupPageGuard(router)
   // setupPermissionGuard(router);
 }

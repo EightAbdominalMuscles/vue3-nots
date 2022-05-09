@@ -1,17 +1,17 @@
 // eslint-disable-next-line
-const path = require('path');
+const path = require('path')
 
 module.exports = {
   root: true,
-  // parser: 'vue-eslint-parser',
-  // parserOptions: {
-  //   // Parser that checks the content of the <script> tag
-  //   sourceType: 'module',
-  //   ecmaVersion: 2020,
-  //   ecmaFeatures: {
-  //     jsx: true,
-  //   },
-  // },
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    // Parser that checks the content of the <script> tag
+    sourceType: 'module',
+    ecmaVersion: 2020,
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
   env: {
     'browser': true,
     'node': true,
@@ -19,13 +19,15 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
-      'alias': {
-        'map': [
-          ['@', './src']
+      alias: {
+        map: [
+          ['@', './src'],
+          ['components', './src/components'],
+          ['assets', './src/assets'],
         ],
-        'extensions': ['.js', '.jsx', '.json']
-      }
-    }
+        extensions: ['.js', '.jsx', '.json'],
+      },
+    },
   },
   extends: [
     // Airbnb JavaScript Style Guide https://github.com/airbnb/javascript

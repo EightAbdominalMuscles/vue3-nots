@@ -1,11 +1,7 @@
 <template>
   <div>
     <el-container class="layout">
-      <el-header
-        v-if="navbar"
-        class="layout-navbar"
-        :style="{ height: navbarHeight + 'px' }"
-      >
+      <el-header v-if="navbar" class="layout-navbar" :style="{ height: navbarHeight + 'px' }">
         <!-- 导航栏 -->
         <nav-bar />
       </el-header>
@@ -34,50 +30,45 @@
 </template>
 
 <script setup>
-  import { ref, computed, watch, provide } from 'vue';
+  import { computed } from 'vue'
   // 路由跳转逻辑
-  import PageLayout from './page-layout.vue';
-  import NavBar from './components/navbar/index.vue';
-  import TabBar from './components/tabbar/index.vue';
-  import Menu from './components/menu/index.vue';
-  import BreadCrumb from './components/breadcrumb/index.vue';
-  import { useAppStore } from '@/store';
+  import { useAppStore } from '@/store'
+  import PageLayout from './page-layout.vue'
+  import NavBar from './components/navbar/index.vue'
+  import TabBar from './components/tabbar/index.vue'
+  import Menu from './components/menu/index.vue'
+  import BreadCrumb from './components/breadcrumb/index.vue'
 
-  const appStore = useAppStore();
+  const appStore = useAppStore()
   // 是否有顶部
-  const navbar = computed(() => appStore.navbar);
+  const navbar = computed(() => appStore.navbar)
   // 是否有菜单
-  const renderMenu = computed(() => appStore.menu);
+  const renderMenu = computed(() => appStore.menu)
   // 是否显示菜单
-  const hideMenu = computed(() => appStore.hideMenu);
+  const hideMenu = computed(() => appStore.hideMenu)
   // header的高
   const navbarHeight = computed(() => {
-    return navbar.value ? appStore.navbarHeight : '';
-  });
+    return navbar.value ? appStore.navbarHeight : ''
+  })
 
   // 左侧菜单的宽
   const menuWidth = computed(() => {
-    return `${appStore.menuCollapse ? '48' : appStore.menuWidth}`;
-  });
+    return `${appStore.menuCollapse ? '48' : appStore.menuWidth}`
+  })
   // 侧边是否能折叠
-  const collapsed = computed(() => {
-    return appStore.menuCollapse;
-  });
+  // const collapsed = computed(() => {
+  //   return appStore.menuCollapse
+  // })
   // 内容区域的样式（随header是否存在，左侧菜单是否折叠变化）
   const paddingStyle = computed(() => {
-    const paddingLeft =
-      renderMenu.value && !hideMenu.value
-        ? { paddingLeft: `${menuWidth.value}px` }
-        : {};
-    const paddingTop = navbar.value
-      ? { paddingTop: `${navbarHeight.value}px` }
-      : {};
-    return { ...paddingLeft, ...paddingTop };
-  });
+    const paddingLeft = renderMenu.value && !hideMenu.value ? { paddingLeft: `${menuWidth.value}px` } : {}
+    const paddingTop = navbar.value ? { paddingTop: `${navbarHeight.value}px` } : {}
+    return { ...paddingLeft, ...paddingTop }
+  })
 </script>
 
-<style scoped lang="scss">
-  $layout-max-width: 1100px;
+<style scoped lang="less">
+  @layout-max-width: 1100px;
   .layout {
     width: 100%;
     height: 100%;
